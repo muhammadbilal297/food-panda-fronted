@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --primary:red;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+/* NAVBAR STYLE  */
+.container{
+    background-color: white;
+    height: 55px;
+    box-shadow: 0px -1px  8px black;
+    z-index: 1  ;
+    position: sticky;
+    top: 0px;
+}
+.max-container{
+    max-width: 1550px;
+    margin: 0px auto;
+}
+.nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    padding-top: 10px;
+    margin: 0px 100px 0px 100px;
+}
+#bag{
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 3px;
+    transition: all .3s ease;
+}
+
+.icon h3{
+   color: #C21760;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#icon{
+   
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+}
+.nav-item {
+    display: flex;
+    gap: 40px;
+    z-index: 1;
+}
+#log, #sign{
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 15px 5px 15px ;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+#en{
+    text-decoration: none;
+    padding: 5px 8px 5px 8px ;
+    color: black;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+#sign{
+    border: none;
+    background-color:  #C21760; 
+    color: white;
+}
+/* NAVBAR MEDIA QUERY FOR MOBILE  */
+@media (max-width: 600px) {
+    .container {
+        height: auto;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 0;
+        padding: 10px 15px;
+    }
+
+    .icon {
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .icon h3 {
+        font-size: 20px;
+        color: #C21760;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #log, #sign, #en {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding: 8px 0;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    #log {
+        border: 1px solid #000;
+        background-color: white;
+        color: black;
+    }
+
+    #sign {
+        border: none;
+        background-color: #C21760;
+        color: white;
+    }
+
+    #en {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid #000;
+        background-color: white;
+        padding: 8px 0;
+    }
+
+    #bag {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+/* BELOW NAVBAR CONTENT  */
+.content{
+    position: relative;
+    height: 80vh;
+    background-color: rgb(255, 246, 246);
+}
+.content img{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 90vh;
+}
+.content-items{
+    
+    padding: 200px 0px 0px 100px ;
+}
+.content-items h1{
+    font-size: 40px;
+}
+.input-item {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 50px;
+    padding: 0 10px;  
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    background-color: #fff; 
+    width: 450px; 
+}
+
+button{
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+.nav-item button:hover{
+    transform: scale(1.1);
+    background-color: #a91450; 
+    
+}
+button:hover {
+    transform: scale(1.1);
+    background-color: #a91450; 
+    
+}
+
+.input-item input {
+    border: none;
+    padding: 5px;
+    height: 100%; 
+    width: 80%; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+}
+#me{
+    gap: 3px;
+    color: #ea2f80;
+}
+.input-item input::placeholder {
+    color: #aaa; 
+    font-size: 16px; 
+}
+
+.input-item span {
+    margin-left: 10px;  
+    color: #000; 
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap; 
+}
+
+.locate {
+    display: flex; 
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    width: 550px; 
+    height: 80px;
+    margin-top: 30px;
+    padding: 0 20px;
+    gap: 20px; 
+}
+
+#find {
+    background-color: #C21760;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    color: white; 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;   
+}
+
+/* BELOW LANDING PAGE CONTENT  */
+.about{
+    position: relative;
+    margin-top: 100px;
+    height: 600px;
+    
+}
+.about h1{
+    margin-left: 100px;
+}
+.img{
+    margin-top: 30px;
+}
+.img img{
+    width: 100%;
+    height: 400px;
+}
+.partner{
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: white ;
+    top: 280px;
+    left: 100px;
+    padding: 10px 0px 10px 20px ;
+    box-shadow: -2px -5px 30px black;
+    border-radius: 10px;
+}
+.partner button{
+    background-color: #ea2f80;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+/* BELOW CITY SECTION CSS STARTS  */
+
+.city{
+    display: flex;
+    flex-wrap: wrap;
+}
+.explore h1{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.cities{
+    margin-top: 20px;
+    margin-left: 70px;
+}
+.citi{
+    position: relative;
+}
+.citi img{
+    height: 300px;
+    width: 300px;
+    
+    transition: transform 0.3s ease
+}
+.cities .citi {
+    position: relative;
+    overflow: hidden; 
+}
+.cities .citi:hover img {
+    transform: scale(1.1); 
+}
+
+.citi button{
+    height: 40px;
+    width: 120px;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+/* APP SECTION CSS STARTS */
+
+.pocket{
+    margin-top: 50px;
+    margin-left: 100px;
+    padding-bottom: 50px;
+}
+.store{
+    position: relative;
+    margin: 30px 20px 0px 0px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    background-color: #C21760;
+    color: white;
+    border-radius: 10px;
+}
+
+#qr {
+padding: 7px;
+    border:1px solid white ;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 70px;
+    width: 80px;
+}
+
+.para{
+    display: flex;
+    
+    
+}
+
+.para p{
+    font-size: large;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.svg{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.store #phone{
+    position: absolute;
+    top: -80px;
+    right: 0px;
+    height: 480px;
+    width: 600px;
+}
+/* OFFICE SECTION CSS STARTS */
+.office{
+    position: relative;
+    height: 700px;
+}
+
+.office-items h1{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.office-img img{
+    margin-top: 50px;
+    width: 98.9vw;
+}
+.office-content{
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    left: 100px;
+    top: 470px;
+    width: 500px;
+    box-shadow: 0px -1px  8px black;
+    background-color: white;
+}
+.office-content, h3, p{
+    padding-left: 20px;
+}
+.office-content button{
+    margin-left: 20px;
+} #get{
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    background-color: #ea2f80;
+}
+
+.question{
+    margin: 100px 0px 0px 100px;
+    width: 1250px ;
+}
+.question h1{
+    padding-bottom: 40px;
+}
+.question p {
+    padding-bottom: 30px;
+}
+.question h2{
+    margin: 20px 0px 0px 0px;
+}
+.question h3{
+    margin: 20px 0px 20px 0px;
+}
+.footer{
+margin: 100px 0px 0px 0px ;
+padding-bottom: 50px;
+}
+.top{
+    margin: 25px 150px 0px 100px;
+    padding-bottom: 25px;
+    display: flex;
+    gap: 20px;
+}
+.top a{
+    color: black;
+}
+.footer-item{
+    margin: 25px 0px 0px 0px ;
+
+} 
+.foot-hr{
+    margin: 0px 90px 0px 90px;
+}
+.footer-item{
+    margin-left: 100px;
+    display: flex;
+    gap: 125px;
+}
+.col-1, .col-2, .col-3 {
+    width: 300px;
+
+}
+.col-1 a, .col-2 a, .col-3 a{
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.panda{
+    margin: 50px 0px 0px 100px;
+    display: flex;
+    
+    gap: 5px;
+    
+}
+.panda img{
+    margin-bottom: 5px;
+}
+#last-hr{
+    margin: 0px 90px 0px 90px;
+}
+.last{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+    padding-bottom: 20px;
+}
+.panda h3{
+    margin-top: 5px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    margin-top: 55px;
+}
+.social div{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: all .3s ease;
+}
+.hov:hover{
+    transform: scale(1.1);
+    border-radius: ;
+    background-color: #f8f6f6;
+}
